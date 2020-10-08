@@ -1,0 +1,144 @@
+html {
+    font-size: 62.5% !important;    /* 取默认字体的百分比 */
+}
+@media (min-width: 992px){
+    html {
+        font-size: 62.5%;
+    }
+}
+@media (min-width: 768px){
+    html {
+        font-size: 59%;
+    }
+}
+@media (min-width: 576px){
+    html {
+        font-size: 56%
+    }
+}
+body{
+    overflow-x: hidden;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* 左侧区域 */
+.leftCon {
+    left: 0;
+    top: 0;
+}
+header {
+    height: 55px;
+}
+header ul a {
+    font-size: 1.6rem;
+}
+.login {
+    height: calc(100vh - 70px);
+}
+.login a {
+    font-size: 1.6rem;
+}
+.register {
+    border-radius: 13px;
+    vertical-align: -1px;
+}
+.menu {
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    transition: all .2s ;
+}
+.menu.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.5,1.5);
+}
+.menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1,1);
+}
+.menu ul a {
+    font-size: 1.8rem;
+}
+.menu footer p {
+    color: rgba(0, 0, 0, .38);
+    font-size: 1.4rem;
+}
+.menu .menu-login a {
+    font-size: 1.6rem;
+}
+
+@media (max-width: 992px) {
+    .leftCon {
+        position: relative !important;
+        border: none !important;
+    }
+    .login {
+        height: auto;
+    }
+}
+
+/* 右侧区域 */
+.club h3,
+.selected h3,
+.teach h3 {
+    font-size: 2.2rem;
+}
+.club p,
+.selected p,
+.teach p {
+    font-size: 1.6rem;
+    line-height: 34px;
+}
+.more {
+    color: #C2A661 !important;      /* 再次说明，继承来的样式不占有权重！！！这里加important是为了干掉a标签hover时的系统样式 */
+}
+.club a:not(.more) {
+    border-radius: 13px;
+}
+.selected-pic a {
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, .12);
+    transition: all .2s ease-out;
+}
+.selected-pic a:hover {
+    box-shadow: 0px -1px 2px 2px rgba(0, 0, 0, .12);
+    transform: translateY(-5px);
+}
+.selected-pic a img {
+    width: 40%;
+    margin-top: -28px;
+}
+.selected-pic a p {
+    font-size: 1.4rem;
+    line-height: normal;
+}
+.teach .teach-pic {
+    cursor: pointer;
+    transition: all .2s ease-out;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, .12);
+}
+.teach .teach-pic:hover {
+    box-shadow: 0px -1px 2px 2px rgba(0, 0, 0, .12);
+    transform: translateY(-5px);
+}
+.teach .teach-pic .small-title {
+    color: #fff;
+    left: 0px;
+    top: 6px;
+    font-size: 1.3rem;
+    background-color: #C2A661;
+}
+.bottom-menu {
+    height: 80px;
+    font-size: 1.2rem;
+}
+@media (max-width: 576px) {
+    .teach {
+        margin-bottom: 100px;
+    }
+}
